@@ -5,6 +5,7 @@ var graph = new Dictionary<string, string[]> {
 };
 
 var queue = new Queue<string>();
+var searched = new Dictionary<string, int>();
 
 foreach (var member in graph["you"])
     queue.Enqueue(member);
@@ -17,10 +18,11 @@ while (queue.Count > 0)
     {
         Console.WriteLine($"Found seller! {member} is seller");
     }
-    else if (graph.TryGetValue(member, out var members))
+    else if (!searched.ContainsKey(member) && graph.TryGetValue(member, out var members))
     {
-
         foreach (var m in members)
             queue.Enqueue(m);
+
+        searched[member] = 1;
     }
 }
