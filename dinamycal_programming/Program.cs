@@ -46,7 +46,7 @@ namespace dinamycal_programming
                     if (i == 0)
                         cell[i, j] = remindWeight >= 0 ? itemPrice : 0;
                     else
-                        cell[i, j] = remindWeight < 0 ? cell[i-1, j] : remindWeight == 0 ? itemPrice : itemPrice + cell[i-1, remindWeight-1];
+                        cell[i, j] = remindWeight < 0 ? cell[i-1, j] : remindWeight == 0 ? itemPrice : Math.Max(itemPrice, itemPrice + cell[i-1, remindWeight-1]);
 
                     Console.WriteLine(cell[i, j]);
                 }
