@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace sort_merge
+namespace sort_selection
 {
     class Program
     {
