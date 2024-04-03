@@ -16,16 +16,22 @@ namespace binary_search
             var start = 0;
             var finish = arr.Count;
 
-            while (start <= finish) {
+            while (start <= finish)
+            {
                 var mid = (start + finish) / 2;
                 Console.WriteLine($"mid: {mid}");
                 var value = arr[mid];
-                if (value == find) {
+                if (value == find)
+                {
                     Console.WriteLine($"Found {find}");
                     break;
-                } else if(value > find) {
+                }
+                else if (value > find)
+                {
                     finish = mid - 1;
-                } else if(value < find) {
+                }
+                else if (value < find)
+                {
                     start = mid + 1;
                 }
             }

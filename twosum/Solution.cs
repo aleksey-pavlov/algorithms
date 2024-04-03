@@ -1,4 +1,6 @@
 
+using System.Data;
+
 namespace TwoSum
 {
     public class Solution
@@ -11,28 +13,25 @@ namespace TwoSum
             if (nums.Length == 2 && nums.Sum() == target)
                 return new int[] { 0, 1 };
 
-            var left = 0;
-            for (var right = nums.Length - 1; left < right;)
+            var map = new Dictionary<int, int>();
+
+            for (var i = 0; i < nums.Length; i++)
             {
-                if (nums[right] >= target)
+                map[nums[i]] = i;
+            }
+
+            for (var i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] >= target)
                 {
-                    right--;
                     continue;
                 }
 
-                var sum = nums[left] + nums[right];
+                var remind = target - nums[i];
 
-                if (sum < target)
+                if (map.TryGetValue(remind, out int left) && left != i)
                 {
-                    left++;
-                }
-                else if (sum > target)
-                {
-                    right--;
-                }
-                else
-                {
-                    return new int[] { left, right };
+                    return new int[2] { i, left };
                 }
             }
 
