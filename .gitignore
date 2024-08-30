@@ -197,7 +197,7 @@ FakesAssemblies/
 .vs/
 src/SetupTestScriptOutput.txt
 .vscode/
-
+.idea/
 \.DS_Store
 
 # Binary MSBuild Log files
