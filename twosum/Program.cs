@@ -1,4 +1,4 @@
-﻿/* https://leetcode.com/problems/two-sum/ */
+﻿
 var res1 = TwoSum(new int[] { 1, 2, 3, 7, 11, 15 }, 9);
 
 Console.WriteLine(string.Join(", ", res1));
