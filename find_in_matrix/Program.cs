@@ -24,34 +24,28 @@ int[][] matrix = [
     [23,30,34,60]
 ];
 
-int target = 34;
+int target = 16;
 
+var start = 0;
+var end = matrix.Length * matrix[0].Length - 1;
 
-for (var i = 0; i < matrix.Length; i++)
+while (start <= end)
 {
-    if (matrix[i][matrix[i].Length - 1] > target)
+    var mid = (start + end) / 2;
+    var current = matrix[mid /  matrix[0].Length][mid % matrix[0].Length];
+
+    if (current == target)
     {
-        var arr = matrix[i];
-        var start = 0;
-        var end = matrix[i].Length;
-
-        while (start <= end)
-        {
-            var mid = (start + end) / 2;
-
-            if (arr[mid] == target)
-            {
-                Console.WriteLine(true);
-                break;
-            }
-            else if (arr[mid] > target)
-            {
-                end = mid - 1;
-            }
-            else if (arr[mid] < target)
-            {
-                start = mid + 1;
-            }
-        }
+        Console.WriteLine(true);
+        break;
+    }
+    else if (current > target)
+    {
+        end = mid - 1;
+    }
+    else if (current < target)
+    {
+        start = mid + 1;
     }
 }
+
