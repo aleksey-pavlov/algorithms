@@ -49,6 +49,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "longest_palindrome", "longe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reverse_int", "reverse_int\reverse_int.csproj", "{71D4BF4E-3E79-4413-B1C3-6B683F84A5D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reverse_linkedlist", "reverse_linkedlist\reverse_linkedlist.csproj", "{FB9CB8F1-478F-433B-9158-40DFD0B189B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "middle_linkedlist", "middle_linkedlist\middle_linkedlist.csproj", "{876A8C77-78C9-46D5-9632-D1D831E5FD73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +151,14 @@ Global
 		{71D4BF4E-3E79-4413-B1C3-6B683F84A5D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71D4BF4E-3E79-4413-B1C3-6B683F84A5D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71D4BF4E-3E79-4413-B1C3-6B683F84A5D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9CB8F1-478F-433B-9158-40DFD0B189B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9CB8F1-478F-433B-9158-40DFD0B189B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9CB8F1-478F-433B-9158-40DFD0B189B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9CB8F1-478F-433B-9158-40DFD0B189B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{876A8C77-78C9-46D5-9632-D1D831E5FD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{876A8C77-78C9-46D5-9632-D1D831E5FD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{876A8C77-78C9-46D5-9632-D1D831E5FD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{876A8C77-78C9-46D5-9632-D1D831E5FD73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
