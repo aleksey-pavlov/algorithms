@@ -19,25 +19,24 @@ namespace dinamycal_programming
         {
             
             var items = new Dictionary<Items, int[]>{ 
-                [Items.Guitar] = new int[] { 1500, 1 },
-                [Items.Bumbox] = new int[] { 3000, 4 },
-                [Items.Laptop] = new int[] { 2000, 3 },
-                [Items.Phone] = new int[] { 2000, 1 }
+                [Items.Guitar] = [1500, 1],
+                [Items.Bumbox] = [3000, 4],
+                [Items.Laptop] = [2000, 3],
             };
             
             var bucket = 4;
 
             int[,] cell = new int[items.Count, bucket];
-
-
+            
             for (int i = 0; i < items.Count; i++) {
-                
+                var itemKey = (Items)i;
+                var cols = new string[bucket + 1];
+                cols[0] = $"{itemKey}";
+
                 for (int j = 0; j < bucket; j++) {
 
                     var cellWeight = j + 1;
-                    var cellPrice = cell[i,j];
 
-                    var itemKey = (Items)i;
                     var itemPrice = items[itemKey][0];
                     var itemWeight = items[itemKey][1];
 
@@ -48,11 +47,14 @@ namespace dinamycal_programming
                     else
                         cell[i, j] = remindWeight < 0 ? cell[i-1, j] : remindWeight == 0 ? itemPrice : Math.Max(itemPrice, itemPrice + cell[i-1, remindWeight-1]);
 
-                    Console.WriteLine(cell[i, j]);
+                    cols[j + 1] = $"{cell[i, j]}";
                 }
 
-                Console.WriteLine("-------------");
+                Console.WriteLine(string.Join(" | ", cols));
+                Console.WriteLine("------------------------------------------");
             }
+
+            Console.WriteLine($"\nResult: {cell[items.Count - 1, bucket - 1]}");
         }
     }
 }
